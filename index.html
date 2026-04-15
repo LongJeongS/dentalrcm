@@ -1821,9 +1821,15 @@
           if(btn){ btn.disabled = true; btn.textContent = 'Sending\u2026'; }
           var input = form.querySelector('input[type="email"]');
           if(input){ input.disabled = true; }
-          var formData = new FormData(form);
-          var sent = navigator.sendBeacon ? navigator.sendBeacon(form.action, formData) : false;
-          if (!sent) { fetch(form.action, { method:'POST', mode:'no-cors', body: formData }); }
+          // Build url-encoded body (more reliable than sendBeacon + FormData)
+          var params = new URLSearchParams(new FormData(form)).toString();
+          // Fire-and-forget fetch to same-origin proxy
+          fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params,
+            keepalive: true  // survives tab close, like sendBeacon
+          }).catch(function(){});
           // Brief loading state, then thank you
           setTimeout(function(){
             form.innerHTML = '<p style="color:#fff;font-size:1.25rem;font-weight:700;padding:0.75rem 0;text-align:center;">You\u2019re on the list. We\u2019ll be in touch.</p>';
