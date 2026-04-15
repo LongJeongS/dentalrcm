@@ -348,8 +348,8 @@
       background: rgba(255,255,255,0.08);
       border: none;
       border-radius: 16px;
-      padding: 2rem 1.5rem;
-      height: 180px;
+      padding: 3.5rem 1.5rem;
+      height: 240px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -359,8 +359,8 @@
 
     @media (min-width: 720px) {
       .chat-demo {
-        padding: 2.5rem 2rem;
-        height: 200px;
+        padding: 4rem 2rem;
+        height: 280px;
       }
     }
 
@@ -1802,11 +1802,15 @@
           e.preventDefault();
           var btn = form.querySelector('[type="submit"]');
           if(btn){ btn.disabled = true; btn.textContent = 'Sending\u2026'; }
+          var input = form.querySelector('input[type="email"]');
+          if(input){ input.disabled = true; }
           var formData = new FormData(form);
           var sent = navigator.sendBeacon ? navigator.sendBeacon(form.action, formData) : false;
           if (!sent) { fetch(form.action, { method:'POST', mode:'no-cors', body: formData }); }
-          // Show thank you immediately (don't wait for response)
-          form.innerHTML = '<p style="color:rgba(255,255,255,0.9);font-size:0.9375rem;font-weight:500;padding:0.5rem 0;">Thanks! We\u2019ll be in touch.</p>';
+          // Brief loading state, then thank you
+          setTimeout(function(){
+            form.innerHTML = '<p style="color:#fff;font-size:1.25rem;font-weight:700;padding:0.75rem 0;text-align:center;">You\u2019re on the list. We\u2019ll be in touch.</p>';
+          }, 1200);
         });
       });
     })();
