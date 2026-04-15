@@ -1817,12 +1817,12 @@
       document.querySelectorAll('.waitlist').forEach(function(form){
         form.addEventListener('submit', function(e){
           e.preventDefault();
+          // Capture form data BEFORE disabling inputs
+          var params = new URLSearchParams(new FormData(form)).toString();
           var btn = form.querySelector('[type="submit"]');
           if(btn){ btn.disabled = true; btn.textContent = 'Sending\u2026'; }
           var input = form.querySelector('input[type="email"]');
           if(input){ input.disabled = true; }
-          // Build url-encoded body (more reliable than sendBeacon + FormData)
-          var params = new URLSearchParams(new FormData(form)).toString();
           // Fire-and-forget fetch to same-origin proxy
           fetch(form.action, {
             method: 'POST',
