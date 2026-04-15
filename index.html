@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title>DentalRCM — Stop losing revenue to denied claims</title>
-  <meta name="description" content="Software that handles eligibility checks and denial work for 1–4 chair dental practices. Catches denials before submission, runs next to Dentrix, Eaglesoft, and Open Dental.">
+  <title>CleanClaim — Stop losing revenue to denied dental claims</title>
+  <meta name="description" content="Clean-claim billing software for 1–4 chair dental practices. Catches denials before submission, runs next to Dentrix, Eaglesoft, and Open Dental.">
+  <meta property="og:title" content="CleanClaim — What if your claims just went through?">
+  <meta property="og:description" content="Clean-claim billing software for small dental practices. Eligibility checks, claim scrubbing, denial tracking — $179/mo flat.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dentalrcm.pages.dev">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CleanClaim — What if your claims just went through?">
+  <meta name="twitter:description" content="Clean-claim billing software for small dental practices.">
 
   <!-- Analytics: Google Analytics + PostHog -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TW3YE3S2YL"></script>
@@ -268,7 +275,7 @@
       display: none;
     }
 
-    /* Solve-only mode: show only DentalRCM panel */
+    /* Solve-only mode: show only CleanClaim panel */
     .reveal.solve-only {
       width: 380px;
     }
@@ -924,9 +931,9 @@
   <div class="logo-bar">
     <a href="#" class="logo">
       <span class="logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/><path d="M9 13l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
-      DentalRCM
+      CleanClaim
     </a>
   </div>
 
@@ -960,7 +967,7 @@
           </div>
         </div>
         <div class="reveal-panel reveal-panel-new">
-          <div class="reveal-panel-label">With DentalRCM</div>
+          <div class="reveal-panel-label">With CleanClaim</div>
           <div class="den-scene" id="denNew">
             <div class="den-side den-side-left"><i class="ti ti-building-hospital"></i> Practice</div>
             <div class="den-side den-side-right">Insurance <i class="ti ti-shield-check" style="color:var(--solve)"></i></div>
@@ -1001,7 +1008,7 @@
           </div>
         </div>
         <div class="reveal-panel reveal-panel-new">
-          <div class="reveal-panel-label">With DentalRCM</div>
+          <div class="reveal-panel-label">With CleanClaim</div>
           <div class="elig-anim elig-new">
             <div class="anim-section-label"><i class="ti ti-bolt" style="color:var(--solve)"></i> Eligibility checked overnight, all payers</div>
             <div class="elig-grid" id="gridNew">
@@ -1045,7 +1052,7 @@
           </div>
         </div>
         <div class="reveal-panel reveal-panel-new">
-          <div class="reveal-panel-label">With DentalRCM</div>
+          <div class="reveal-panel-label">With CleanClaim</div>
           <div class="hold-scene">
             <div class="hold-dashboard" id="holdDash">
               <div class="dash-row" id="dashRow1">
@@ -1101,7 +1108,7 @@
           </div>
         </div>
         <div class="reveal-panel reveal-panel-new">
-          <div class="reveal-panel-label">With DentalRCM</div>
+          <div class="reveal-panel-label">With CleanClaim</div>
           <div class="rev-scene" id="revNew">
             <div class="rev-losses" id="revGains">
               <div class="rev-gain-row" id="revGain1">
@@ -1134,9 +1141,9 @@
 
     <p class="block">Every denied claim started as a <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-holdtime" data-mode="solve">preventable error</span>. A missing X-ray. A frequency limit. A code your front desk couldn&rsquo;t have known about.</p>
 
-    <p class="block">DentalRCM <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-denials" data-mode="solve">catches your denials</span> before you submit them. It <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-eligibility" data-mode="solve">checks every payer</span>, and <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-revenue" data-mode="solve">recovers the revenue</span> you&rsquo;ve been losing.</p>
+    <p class="block">CleanClaim <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-denials" data-mode="solve">catches your denials</span> before you submit them. It <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-eligibility" data-mode="solve">checks every payer</span>, and <span class="hl hl-solve" tabindex="0" role="button" data-reveal="wf-revenue" data-mode="solve">recovers the revenue</span> you&rsquo;ve been losing.</p>
 
-    <p class="block">DentalRCM checks your patients&rsquo; coverage overnight. It catches the errors before you submit. It translates denial codes into plain English and drafts the fix. Your billing finally just works.</p>
+    <p class="block">CleanClaim checks your patients&rsquo; coverage overnight. It catches the errors before you submit. It translates denial codes into plain English and drafts the fix. Your billing finally just works.</p>
 
   </div>
 
@@ -1144,10 +1151,10 @@
   <div class="blue-band">
     <div class="blue-band-inner">
 
-      <p class="demo-sub">Want a clean claim? DentalRCM will file it for you.</p>
+      <p class="demo-sub">Want a clean claim? CleanClaim will file it for you.</p>
       <div class="demo-headline">Stop losing revenue to paperwork.</div>
 
-      <div class="chat-demo" id="chatDemo" role="figure" aria-label="DentalRCM in action">
+      <div class="chat-demo" id="chatDemo" role="figure" aria-label="CleanClaim in action">
         <div class="chat-bubble chat-user" id="chatUser"></div>
         <div class="chat-bubble chat-ai" id="chatAi">
           <span class="chat-spinner" id="chatSpinner">
@@ -1180,7 +1187,7 @@
   </div><!-- /page-content -->
 
   <footer>
-    <span>&copy; 2026 DentalRCM</span>
+    <span>&copy; 2026 CleanClaim</span>
     <div class="footer-links">
       <a href="mailto:hello@dentalrcm.example">Contact</a>
       <a href="#">Privacy</a>
