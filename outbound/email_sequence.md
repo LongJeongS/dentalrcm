@@ -1,6 +1,6 @@
-# DentalRCM — Outbound Email Sequence (initial send, v2)
+# CleanClaim — Outbound Email Sequence (v3)
 
-Day-zero version of the cold sequence, for use **before** Jeong has done any 1:1 calls. Once Jeong has 5–10 real conversations, graduate to [email_sequence.md](email_sequence.md) — see [README.md](README.md) for the transition checklist.
+Cold email sequence for CleanClaim validation. 4 touches over 12 days. Landing page: `cleanclaim.jparkventure.com`.
 
 Format: plain text. One-to-one sends. No images, no HTML, no tracking pixels. 4 touches over 12 days.
 
@@ -12,9 +12,10 @@ Touch 1 has two variants (A and B) — pick one as the control for the first bat
 
 | Token | What to fill in | Where it appears |
 |---|---|---|
-| `[Name]` | Recipient's first name. Hand-verified, never inferred from email local-parts. | All 4 touches |
-| `[link]` (call) | Jeong's Cal.com booking link. | Touch 1, 2, 3 |
-| `[link]` (letter) | The deployed founder letter URL. Used in the PS line. | Touch 1 PS, Touch 2 PS, Touch 4 |
+| `[link]` (call) | Cal.com booking link: `https://cal.com/jeong-park-yax9mk/15min` | Touch 2, 3 |
+| `[link]` (page) | Landing page: `https://cleanclaim.jparkventure.com` | Touch 2, Touch 4 |
+
+**Note:** No `[Name]` token — leads are dental practice inboxes, not individual contacts. "Hi," is used for all touches.
 
 ---
 
@@ -23,26 +24,24 @@ Touch 1 has two variants (A and B) — pick one as the control for the first bat
 **Subject:** `your waiting room`
 
 ```
-Hi [Name],
+Hi,
 
-I was waiting at the dentist a few months ago and the woman at the front mentioned she'd spent her morning confirming insurance for the next day's patients — portal by portal, one at a time.
+I was waiting at the dentist a few months ago and the office manager mentioned she'd spent her morning confirming insurance for the next day's patients — portal by portal, one at a time.
 
-30 patients tomorrow. Checked one at a time.
+Tomorrow's patients. Checked one at a time.
 
-DentalRCM runs those checks overnight, across all your payers at once. The list is ready when you walk in. Coverage gaps caught the night before instead of showing up as denials 60 days later — fewer denials and cleaner AR at month end.
+CleanClaim runs those checks overnight, across all your payers at once. The list is ready when you walk in. Coverage gaps caught the night before instead of showing up as denials 60 days later — fewer denials and cleaner AR at month end.
 
-Open to a call? [link]
+If this sounds like your mornings, I'd love to hear how you're handling it.
 
 — Jeong
-
-PS: Rather read first? Here's what I'm building and why: [link]
 ```
 
 **Notes:**
+- **No links in Touch 1** — new domain (13 days warm-up), links in first-touch emails hurt deliverability. If they reply "yes," send the Cal.com link in the reply.
 - Uses the **practitioner hook** — a specific personal story (waiting room observation) that only a real person in that situation could have written. This is the n-of-1 element.
 - Names the product and says what it does in one sentence — no "I've been building something" preamble.
 - Two-layer value: "list is ready when you walk in" (office manager), "fewer denials and cleaner AR at month end" (what the dentist sees).
-- Founder letter is in the PS, not the body. One ask in the body (call), one supporting asset in the PS (letter).
 
 ---
 
@@ -51,22 +50,21 @@ PS: Rather read first? Here's what I'm building and why: [link]
 **Subject:** `eligibility, again`
 
 ```
-Hi [Name],
+Hi,
 
 How many insurance checks did you run this morning before your first patient?
 
-DentalRCM runs those overnight — all your payers, one pass, before you start. And because coverage issues get flagged the night before, denials that used to disappear for 60 days show up on your desk the same week.
+CleanClaim runs those overnight — all your payers, one pass, before you start. And because coverage issues get flagged the night before, denials that used to disappear for 60 days show up on your desk the same week.
 
 Better for your morning. Better for what the dentist sees at month end.
 
-Open to a call? [link]
+If this sounds like your mornings, I'd love to hear how you're handling it.
 
 — Jeong
-
-PS: Rather read first? Here's what I'm building and why: [link]
 ```
 
 **Notes:**
+- **No links in Touch 1** — same deliverability rationale as 1A.
 - Opens with a **question** instead of a scene — drops the reader directly into her morning before any claim is made.
 - Same two-layer close: "Better for your morning" (office manager), "Better for what the dentist sees at month end" (decision-maker).
 - More direct than 1A — no personal story, just the question and the product. Better for recipients who scan fast and delete anything that doesn't get to the point.
@@ -78,40 +76,39 @@ PS: Rather read first? Here's what I'm building and why: [link]
 **Subject:** `that patient call`
 
 ```
-Hi [Name],
+Hi,
 
 You know the one — a patient calls, confused about a bill. You pull up the claim. Denied two months ago, coverage issue that was there before it was submitted.
 
 The patient is frustrated, the resubmission window is closing, and the morning just derailed.
 
-The coverage issue was there before the claim went out — nobody caught it in time.
-
-That's what DentalRCM is built around. Open to a call? [link]
+That's what CleanClaim is built to solve. If you're dealing with this, I'd like to help. [link]
 
 — Jeong
 
-PS: Rather read first? [link]
+What if your claims just went through? [link]
 ```
 
 **Notes:**
 - Opens with a **scene**, not a statement. "You know the one" drops the reader into a moment she's lived.
 - Genuinely new angle from Touch 1 — Touch 1 is the morning eligibility grind, Touch 2 is the denial that surfaces 60 days later.
-- Still one ask in the body (call), letter in the PS.
+- Landing page link echoes the headline ("What if your claims just went through?") — creates continuity when the reader clicks through.
+- One ask in the body (call), landing page link after the sign-off.
 
 ---
 
 ## Touch 3 — Day 7
 
-**Subject:** `what would you do`
+**Subject:** `your morning`
 
 ```
-Hi [Name],
+Hi,
 
 What would you do with the hours you spend on insurance checks every week — if they just weren't there?
 
-I ask everyone I talk to in this space. Nobody has the same answer. Some say they'd actually get through the callback list. Some say they'd leave on time for once.
+Some people say they'd finally get through the callback list. Others say they'd leave on time for once.
 
-That's what I'm building toward. Worth a conversation? [link]
+What if your claims just went through — and your morning was yours again? Worth a conversation? [link]
 
 — Jeong
 ```
@@ -128,11 +125,11 @@ That's what I'm building toward. Worth a conversation? [link]
 **Subject:** `friday`
 
 ```
-Hi [Name],
+Hi,
 
 One thing worth trying — a Friday spot-check of that week's denied claims before they age.
 
-Catching a denial the same week it comes back changes what's recoverable. Doesn't require any new software. Just a standing 20 minutes on Fridays.
+Most practices lose $4,000–$8,000 a month to denials that sit too long. Catching one the same week it comes back changes what's recoverable. Doesn't require any new software. Just a standing 20 minutes on Fridays.
 
 If you ever want to talk through what that looks like at scale: [link]
 
@@ -141,7 +138,8 @@ If you ever want to talk through what that looks like at scale: [link]
 
 **Notes:**
 - **Not a breakup email.** No "this is my last email," no "I'll assume the timing is off." The reader doesn't know this is the last touch.
-- Gives free value with no strings — the Friday spot-check works without Jeong's product. The reader gets something useful whether she replies or not.
+- Gives free value with no strings — the Friday spot-check works without CleanClaim. The reader gets something useful whether she replies or not.
+- The "$4,000–$8,000 a month" number matches the landing page's revenue hover card — creates consistency if the reader has already seen the page.
 - The only ask is a soft door-open ("if you ever want to talk through what that looks like at scale"). Lowest-friction CTA in the sequence.
 - No letter link, no PS. Cleanest possible touch.
 

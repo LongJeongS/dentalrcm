@@ -10,7 +10,8 @@
   <meta property="og:title" content="CleanClaim — What if your claims just went through?">
   <meta property="og:description" content="Clean-claim billing software for small dental practices. Eligibility checks, claim scrubbing, denial tracking — $179/mo flat.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dentalrcm.pages.dev">
+  <meta property="og:url" content="https://cleanclaim.jparkventure.com">
+  <link rel="canonical" href="https://cleanclaim.jparkventure.com">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CleanClaim — What if your claims just went through?">
   <meta name="twitter:description" content="Clean-claim billing software for small dental practices.">
@@ -30,6 +31,37 @@
       defaults: '2026-01-30',
       person_profiles: 'always',
     })
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication schema for search engines + AI citation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CleanClaim",
+    "description": "Clean-claim billing software for 1–4 chair dental practices. Catches denials before submission, runs next to Dentrix, Eaglesoft, and Open Dental.",
+    "url": "https://cleanclaim.jparkventure.com",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "179",
+      "highPrice": "249",
+      "priceCurrency": "USD",
+      "offerCount": "2"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Jeong Park"
+    },
+    "featureList": [
+      "Overnight eligibility verification across 200+ dental payers",
+      "Pre-submission claim scrubbing against payer rules",
+      "Denial code translation to plain English",
+      "Corrected claim auto-drafting for one-click resubmission",
+      "Same-day patient billing with click-to-pay"
+    ]
+  }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -940,7 +972,7 @@
     </a>
   </div>
 
-  <h1 id="heroHeadline"><span id="heroText"></span><span class="h1-cursor" id="heroCursor"></span></h1>
+  <h1 id="heroHeadline"><span id="heroText">What if your claims just... went through?</span><span class="h1-cursor" id="heroCursor"></span></h1>
 
   <div class="page-content" id="pageContent">
 
@@ -1252,6 +1284,8 @@
         el.textContent = 'What if your claims just... went through?';
         content.classList.add('visible');
       } else {
+        // Clear the SSR fallback text before typing animation starts
+        el.textContent = '';
         setTimeout(type, 500);
       }
     })();
